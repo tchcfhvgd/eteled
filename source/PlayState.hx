@@ -72,10 +72,6 @@ import openfl.filters.ShaderFilter;
 #if windows
 import Discord.DiscordClient;
 #end
-#if windows
-import Sys;
-import sys.FileSystem;
-#end
 
 using StringTools;
 
