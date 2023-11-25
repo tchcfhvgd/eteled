@@ -97,7 +97,6 @@ class TitleState extends MusicBeatState
 		{
 			startIntro();
 		});
-		startIntro();
 		#end
 	}
 
