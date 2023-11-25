@@ -1495,6 +1495,8 @@ class PlayState extends MusicBeatState
 		FlxG.stage.addEventListener(KeyboardEvent.KEY_DOWN, handleInput);
 		FlxG.stage.addEventListener(KeyboardEvent.KEY_UP, releaseInput);
 		super.create();
+	
+		Paths.clearUnusedMemory();
 	}
 
 	function schoolIntro():Void
