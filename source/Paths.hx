@@ -4,6 +4,7 @@ import openfl.utils.Assets;
 import openfl.display.BitmapData;
 import flixel.graphics.FlxGraphic;
 import flixel.system.FlxAssets.FlxGraphicAsset;
+import flash.media.Sound;
 import openfl.system.System;
 import flixel.FlxG;
 import flixel.graphics.frames.FlxAtlasFrames;
