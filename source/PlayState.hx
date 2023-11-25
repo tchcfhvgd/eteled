@@ -15,9 +15,9 @@ import openfl.ui.Keyboard;
 import openfl.events.KeyboardEvent;
 import Replay.Ana;
 import Replay.Analysis;
-#if cpp
+
 import webm.WebmPlayer;
-#end
+
 import flixel.input.keyboard.FlxKey;
 import haxe.Exception;
 import openfl.geom.Matrix;
@@ -419,7 +419,7 @@ class PlayState extends MusicBeatState
 		FlxG.cameras.add(camSustains);
 		FlxG.cameras.add(camNotes);
 
-		FlxCamera.defaultCameras = [camGame];
+		FlxG.cameras.setDefaultDrawTarget(camGame, true);
 
 		persistentUpdate = true;
 		persistentDraw = true;
