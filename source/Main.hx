@@ -11,6 +11,7 @@ import openfl.Assets;
 import openfl.Lib;
 import openfl.display.FPS;
 import openfl.display.Sprite;
+import openfl.utils.AssetCache;
 import openfl.events.Event;
 
 class Main extends Sprite
@@ -152,5 +153,23 @@ class Main extends Sprite
 	public function getFPS():Float
 	{
 		return fpsCounter.currentFPS;
+	}
+        
+        private inline function onPreStateCreate(state:FlxState):Void
+	{
+		var cache:AssetCache = cast(Assets.cache, AssetCache);
+
+		// Clear the loaded graphics if they are no longer in flixel cache...
+		for (key in cache.bitmapData.keys())
+			if (!FlxG.bitmap.checkCache(key))
+				cache.bitmapData.remove(key);
+
+		// Clear all the loaded sounds from the cache...
+		for (key in cache.sound.keys())
+			cache.sound.remove(key);
+
+		// Clear all the loaded fonts from the cache...
+		for (key in cache.font.keys())
+			cache.font.remove(key);
 	}
 }
