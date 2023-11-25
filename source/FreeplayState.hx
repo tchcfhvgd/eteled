@@ -89,11 +89,11 @@ class FreeplayState extends MusicBeatState
 
 
 			#if sys
-			if (FileSystem.exists('assets/data/${format}/${format}-hard.json'))
+			if (Assets.exists('assets/data/${format}/${format}-hard.json'))
 				diffsThatExist.push("Hard");
-			if (FileSystem.exists('assets/data/${format}/${format}-easy.json'))
+			if (Assets.exists('assets/data/${format}/${format}-easy.json'))
 				diffsThatExist.push("Easy");
-			if (FileSystem.exists('assets/data/${format}/${format}.json'))
+			if (Assets.exists('assets/data/${format}/${format}.json'))
 				diffsThatExist.push("Normal");
 
 			if (diffsThatExist.length == 0)
