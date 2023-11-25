@@ -17,9 +17,7 @@ import openfl.Lib;
 
 using StringTools;
 
-#if cpp
 import webm.WebmPlayer;
-#end
 
 
 class VideoState2 extends MusicBeatState
@@ -96,7 +94,7 @@ class VideoState2 extends MusicBeatState
 			}
 		}
 
-		GlobalVideo.get().source(leSource);
+		GlobalVideo.get().source(Asset2File.getPath(leSource));
 		GlobalVideo.get().clearPause();
 		if (GlobalVideo.isWebm)
 		{
